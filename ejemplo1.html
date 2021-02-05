@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script type="text/javascript" charset="utf-8" src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/fx.js"></script><script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js" data-dojo-config="async: true"></script>
+        <!-- <script>
+            var dojoConfig = {
+            async: true
+            }
+        </script>
+        <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script> -->
+
+        <script>
+            require([
+                'dojo/dom',
+                'dojo/fx',
+                'dojo/domReady!'
+            ], function (dom, fx) {
+
+                var el = dom.byId('contenedor');
+                el.innerHTML = '  Hola Mundo!';
+                // ...but now, with an animation!
+                fx.slideTo({
+                    node: el,
+                    top: 100,
+                    left: 200
+                }).play();
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="contenedor"></div>
+    
+    <!--<div id="contenedor" style="position: absolute; top: 100px; left: 200px;" wfd-id="0">  Hola Mundo!</div> -->
+  
+    </body>
+</html>
